@@ -1,0 +1,90 @@
+@import "./globals";
+@import "./variables";
+
+#main-container {
+  min-height: 100vh;
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  img {
+    &.logo {
+      margin-top: 2.8em;
+    }
+    &.dashboard-image {
+      margin: 1em 0;
+      height: 45vh;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+  h1 {
+    color: $veryDarkBlue;
+    font-weight: 300;
+    padding: 0;
+    font-size: 2em;
+  }
+  h4 {
+    font-weight: 600;
+    margin-top: -10px;
+    opacity: 0.85;
+  }
+  form {
+    input[type="email"] {
+      border: 1px solid $paleBlue;
+      padding: 1em 10em 1em 0.8em;
+      border-radius: 20px;
+      &::placeholder {
+        color: $paleBlue;
+      }
+    }
+    p.error {
+      color: $lightRed;
+      font-size: 0.5em;
+      align-self: start;
+      opacity: 0;
+    }
+    button {
+      background: $blue;
+      padding: 1em 2em;
+      border-radius: 20px;
+      color: #fff;
+      box-shadow: 0 2.5px 5px $paleBlue;
+      transition: 0.3s all ease-in-out;
+
+      &:active {
+        background: $paleBlue;
+        color: rgb(53, 53, 53);
+      }
+    }
+  }
+  footer {
+    margin-top: 2em;
+
+    text-align: center;
+    a {
+      margin: 0 0.5em;
+      padding: 0.25em 0.5em;
+      border-radius: 50px;
+      border: 1px solid $paleBlue;
+      transition: 0.3s all ease-in-out;
+      &:hover {
+        background: $blue;
+        color: white;
+      }
+    }
+    p {
+      font-size: 0.65em;
+    }
+  }
+}
+@media screen and (max-width: 854px) {
+  body {
+    text-align: center;
+    button {
+      margin-top: 1em;
+    }
+  }
+}
